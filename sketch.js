@@ -47,11 +47,11 @@ var createScene = function () {
 
     var anim1 = { subj: heart1.position, prop: 'y', val: 3 }; 
     var anim2 = { subj: heart2.position, prop: 'y', val: 5 }; 
-    var anim2 = { subj: heart3.position, prop: 'y', val: 2 }; 
-    var anim3 = { subj: sphere1.position, prop: 'x', val: 45 };
-    var anim4 = { subj: sphere1.rotation, prop: 'x', val: -Math.PI / 2 };
+    var anim3 = { subj: heart3.position, prop: 'y', val: 2 }; 
+    var anim4 = { subj: sphere1.position, prop: 'x', val: 45 };
+    var anim5 = { subj: sphere1.rotation, prop: 'x', val: -Math.PI / 2 };
 
-    var anims = [anim1, anim2, anim3, anim4];
+    var anims = [anim1, anim2, anim3, anim4, anim5];
     animate(anims, scene, 10, true);
 
     // Our built-in 'ground' shape.

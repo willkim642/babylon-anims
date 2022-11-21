@@ -38,12 +38,11 @@ var createScene = function () {
 
     var toaster = new meshModel('toast_acrobatics.glb', 10);
     var heart = new meshModel('emoji_heart.glb', 1);
-    //heart.position.y = 10;
 
-    var anim1 = { subj: toaster.rotation, prop: 'y', val: 5 };
+    var anim1 = { subj: toaster.rotation, prop: 'y', val: Math.PI / 2 };
     var anim2 = { subj: heart.position, prop: 'y', val: 3 };
     var anim3 = { subj: sphere1.position, prop: 'x', val: 6 };
-    var anim4 = { subj: sphere1.rotation, prop: 'x', val: 6 };
+    var anim4 = { subj: sphere1.rotation, prop: 'z', val: -Math.PI / 2 };
 
     var anims = [anim1, anim2, anim3, anim4];
     animate(anims, scene);

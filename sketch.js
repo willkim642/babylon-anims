@@ -36,7 +36,7 @@ var createScene = function () {
     var box1 = createBox(0, -1, -4, 30, 2, 2);
     var box2 = createBox(2, 1, 2, 2, 2, 2);
 
-    var toaster = new meshModel('toast_acrobatics.glb', 10);
+    var toaster = new meshModel('toast_acrobatics.glb', 3);
     var heart = new meshModel('emoji_heart.glb', 1);
 
     var anim1 = { subj: toaster.rotation, prop: 'z', val: Math.PI / 2 };

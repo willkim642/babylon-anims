@@ -34,8 +34,19 @@ var createScene = function () {
     var newsphere = createSphere(0, 1, 0, 2);
     newsphere.material = hexMat('#ff0000');
 
+    var box1 = createBox(0, -1, -4, 30, 2, 2);
+    var box2 = createBox(2, 1, 2, 2, 2, 2);
+
+    var toaster = new meshModel('toast_acrobatics.glb', 1);
+
+    var anim1 = { subj: newsphere.position, prop: 'y', val: 2 };
+    var anim2 = { subj: newsphere.material, prop: 'alpha', val: 0 };
+
+    var anims = [anim1, anim2];
+    animate(anims, scene);
+
     // Our built-in 'ground' shape.
-    var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 6, height: 6}, scene);
+    var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 30, height: 10}, scene);
 
     return scene;
 };

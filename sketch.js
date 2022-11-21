@@ -30,19 +30,22 @@ var createScene = function () {
 
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
-    
+
+    var sphere1 = createSphere(-35, 1, -3, 2);
 
     var box1 = createBox(0, -1, -4, 30, 2, 2);
     var box2 = createBox(2, 1, 2, 2, 2, 2);
 
     var toaster = new meshModel('toast_acrobatics.glb', 10);
     var heart = new meshModel('emoji_heart.glb', 1);
-    heart.position.y = 10;
+    //heart.position.y = 10;
 
-    var anim1 = { subj: toaster.transform, prop: 'y', val: 2 };
-    //var anim2 = { subj: newsphere.material, prop: 'alpha', val: 0 };
+    var anim1 = { subj: toaster.rotation, prop: 'y', val: 5 };
+    var anim2 = { subj: heart.position, prop: 'y', val: 3 };
+    var anim3 = { subj: sphere1.position, prop: 'x', val: 6 };
+    var anim4 = { subj: sphere1.rotation, prop: 'x', val: 6 };
 
-    var anims = [anim1];
+    var anims = [anim1, anim2, anim3, anim4];
     animate(anims, scene);
 
     // Our built-in 'ground' shape.

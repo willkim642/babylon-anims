@@ -31,7 +31,7 @@ var createScene = function () {
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
 
-    var sphere1 = createSphere(-35, 1, -3, 2);
+    var sphere1 = createSphere(-10, 0.5, -4, 1);
 
     var box1 = createBox(0, -1, -4, 30, 2, 2);
     var box2 = createBox(2, 1, 2, 2, 2, 2);
@@ -39,13 +39,13 @@ var createScene = function () {
     var toaster = new meshModel('toast_acrobatics.glb', 10);
     var heart = new meshModel('emoji_heart.glb', 1);
 
-    var anim1 = { subj: toaster.rotation, prop: 'y', val: Math.PI / 2 };
+    var anim1 = { subj: toaster.rotation, prop: 'z', val: Math.PI / 2 };
     var anim2 = { subj: heart.position, prop: 'y', val: 3 };
-    var anim3 = { subj: sphere1.position, prop: 'x', val: 6 };
-    var anim4 = { subj: sphere1.rotation, prop: 'z', val: -Math.PI / 2 };
+    var anim3 = { subj: sphere1.position, prop: 'x', val: 45 };
+    var anim4 = { subj: sphere1.rotation, prop: 'x', val: -Math.PI / 2 };
 
-    var anims = [anim1, anim2, anim3, anim4];
-    animate(anims, scene);
+    var anims = [ anim2, anim3, anim4];
+    animate(anims, scene, 10, true);
 
     // Our built-in 'ground' shape.
     var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 30, height: 10}, scene);

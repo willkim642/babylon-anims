@@ -30,9 +30,6 @@ var createScene = function () {
 
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
-
-    var newsphere = createSphere(2, 1, 3, 3);
-    newsphere.material.alpha = 0.5;
     
 
     var box1 = createBox(0, -1, -4, 30, 2, 2);
@@ -41,12 +38,11 @@ var createScene = function () {
     var toaster = new meshModel('toast_acrobatics.glb', 10);
     var heart = new meshModel('emoji_heart.glb', 1);
     heart.position.y = 10;
-    var fish = new meshModel('fish.glb', 0.4);
 
     var anim1 = { subj: toaster.transform, prop: 'y', val: 2 };
     //var anim2 = { subj: newsphere.material, prop: 'alpha', val: 0 };
 
-    var anims = [anim1, anim2];
+    var anims = [anim1];
     animate(anims, scene);
 
     // Our built-in 'ground' shape.

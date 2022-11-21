@@ -46,7 +46,7 @@ var createScene = function () {
     var anim3 = { subj: sphere1.position, prop: 'x', val: 45 };
     var anim4 = { subj: sphere1.rotation, prop: 'x', val: -Math.PI / 2 };
 
-    var anims = [ anim2, anim3, anim4];
+    var anims = [anim1, anim2, anim3, anim4];
     animate(anims, scene, 10, true);
 
     // Our built-in 'ground' shape.
